@@ -1,6 +1,6 @@
 import { useQuery } from "@apollo/client";
 import { useParams } from "react-router-dom";
-import { GET_PROJECT } from "../queries/projects";
+import { GET_PROJECT } from "../api/projects";
 
 export default function Project() {
   const { id } = useParams();

@@ -1,7 +1,7 @@
 import { useQuery } from "@apollo/client";
 import ClientRow from "./ClientRow";
 import { useState } from "react";
-import { GET_CLIENTS } from "../queries/clients";
+import { GET_CLIENTS } from "../api/clients";
 import { Client } from "../types";
 
 export default function Clients() {
@@ -16,7 +16,6 @@ export default function Clients() {
     );
 
   if (error) {
-    console.error(error);
     return "error";
   }
 
@@ -33,6 +32,7 @@ export default function Clients() {
         <tbody>
           {data.clients.map(({ id, name, email, phone }: Client) => (
             <ClientRow
+              key={id}
               id={id}
               name={name}
               email={email}

@@ -2,7 +2,7 @@ import { gql, useMutation } from "@apollo/client";
 import { useEffect } from "react";
 import { AiFillDelete, AiFillEdit } from "react-icons/ai";
 import Button from "./Button";
-import { GET_CLIENTS } from "../queries/clients";
+import { GET_CLIENTS } from "../api/clients";
 import { Client } from "../types";
 
 type Props = {
